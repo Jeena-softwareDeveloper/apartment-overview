@@ -1,0 +1,70 @@
+/* Header.css */
+
+.header {
+    padding: 1rem 0; /* Add vertical padding for more breathing room */
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 1rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Space between left and right content */
+    align-items: center;
+    padding: 0 1rem; /* Add horizontal padding */
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+}
+
+.header-left h1 {
+    font-size: 1.3rem; /* Adjusted font size for prominence */
+    background-color: #ffffff;
+    color: #1f1d1d;
+    font-weight: 700;
+    margin: 0; /* Remove default margins for better alignment */
+}
+
+.header-left h2 {
+    font-size: 1rem; /* Increase font size for visibility */
+    color: #666;
+    margin: 0.3rem 0; /* Maintain small margin for spacing */
+}
+
+.header-left p {
+    font-size: 0.8rem; /* Slightly larger for better readability */
+    color: #888;
+    margin: 0; /* Remove margins for consistency */
+}
+
+.header-right {
+    text-align: right;
+    display: flex;
+    flex-direction: column; /* Stack price-related content vertically */
+}
+
+.price-range {
+    font-size: 1.2rem; /* Larger font for emphasis */
+    color: #2b2b2b;
+    font-weight: 700;
+}
+
+.price-per-sqft {
+    font-size: 1rem; /* Consistent font size */
+    color: #666;
+    margin-top: 0.3rem; /* Add margin for separation */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Stack header content on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+    
+    .header-right {
+        text-align: left; /* Align text to the left for better readability */
+        margin-top: 1rem; /* Add margin for separation in vertical layout */
+    }
+}

@@ -1,0 +1,68 @@
+/* src/ProjectOverview.css */
+.project-overview-container {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .project-overview-header {
+    text-align: center; /* Center header */
+    color: #313265; /* Header text color */
+    margin-bottom: 20px;
+  }
+  
+  .project-overview-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between boxes */
+    margin-bottom: 20px; /* Space below boxes */
+  }
+  
+  .project-overview-box {
+    background-color: #ffffff; /* White background for boxes */
+    border-radius: 8px; /* Rounded corners for boxes */
+    padding: 15px; /* Padding inside boxes */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .project-detail-icon {
+    margin-right: 10px; /* Space between icon and label */
+    font-size: 1.5em; /* Size of the icons */
+    color: #313265; /* Color of the icons */
+  }
+  
+  .project-detail-item {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack label and value */
+  }
+  
+  .project-detail-label {
+    font-weight: bold; /* Make label bold */
+    color: #555; /* Color for labels */
+  }
+  
+  .project-detail-value {
+    color: #272728; /* Color for values */
+  }
+  
+  .contact-button,
+  .schedule-visit-button {
+    
+    
+    margin: 5px; /* Space between buttons */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #4456F5; /* Button background color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .contact-button:hover,
+  .schedule-visit-button:hover {
+    background-color: #313265; /* Darker shade on hover */
+  }
+  

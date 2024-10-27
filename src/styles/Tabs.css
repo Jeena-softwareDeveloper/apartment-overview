@@ -1,0 +1,84 @@
+.tabs {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #313265;
+    min-width: 120px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+/* Circular icon background */
+.tab .tab-icon {
+    background-color: #ffffff; /* Background color for the icon */
+    border-radius: 50%; /* Makes the background circular */
+    padding: 0.4rem; /* Space around the icon */
+    color: #313265; /* Icon color */
+    margin-right: 0.5rem; /* Space between icon and text */
+    display: flex; /* Ensure flex properties apply */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+}
+
+/* Hover effect */
+.tab:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+/* Space between icon and text */
+.tab span {
+    margin-left: 0.2rem;
+}
+
+/* Star effect on hover and click */
+.tab::before {
+    content: '✨✨✨';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    font-size: 1.2rem;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Stars appear on hover */
+.tab:hover::before {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+    animation: twinkle 1s infinite ease-in-out;
+}
+
+/* Stars stay visible when clicked (active class) */
+.tab.active-tab::before {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+    animation: twinkle 1s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
